@@ -1,6 +1,6 @@
 export default function MediaLogos() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="3.19vh" height="3.19vh" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M11 18H14" stroke="#99F3F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M6.46897 18.8729C6.44097 18.8729 6.41897 18.8949 6.41897 18.9229C6.41897 18.9509 6.44097 18.9729 6.46897 18.9729" stroke="#99F3F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M19 12V5C19 3.896 18.105 3 17 3H6C4.895 3 4 3.896 4 5V10" stroke="#99F3F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

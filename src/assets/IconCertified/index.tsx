@@ -1,6 +1,6 @@
 export default function IconCertified() {
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="11.71vh" height="11.71vh" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="29.4385" cy="60.0021" rx="16.8388" ry="16.8388" transform="rotate(-21.0468 29.4385 60.0021)" fill="url(#paint0_linear_4_1293)" fill-opacity="0.8" />
       <g filter="url(#filter0_b_4_1293)">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M63.6767 56.8208L71.5344 53.7971C74.4286 52.6834 75.8708 49.4372 74.7571 46.5429L61.6546 12.4929C60.5409 9.59863 57.2946 8.15647 54.4004 9.27018L12.4926 25.3963C9.59836 26.5101 8.15621 29.7563 9.26992 32.6506L22.3724 66.7006C23.4861 69.5949 26.7324 71.037 29.6267 69.9233L53.1998 60.8523" fill="url(#paint1_linear_4_1293)" fill-opacity="0.8" />

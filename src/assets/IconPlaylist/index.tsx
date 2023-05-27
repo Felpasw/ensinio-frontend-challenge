@@ -2,9 +2,9 @@
 
 
 
-export default function TopLogo1() {
+export default function IconPlaylist() {
   return (
-    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="13.58vh" height="13.58vh" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="33.2662" cy="35.2202" r="20.6241" transform="rotate(15 33.2662 35.2202)" fill="url(#paint0_linear_4_1268)" fill-opacity="0.8" />
       <g filter="url(#filter0_b_4_1268)">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M36.8248 21.9389L76.6675 32.6147L36.8248 21.9389Z" fill="url(#paint1_linear_4_1268)" fill-opacity="0.8" />
@@ -68,6 +68,5 @@ export default function TopLogo1() {
         </radialGradient>
       </defs>
     </svg>
-
   )
 }
