@@ -1,21 +1,43 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Navlist = styled(motion.ul)`
-  color: #fff;
-  height: 100%;
-  background: transparent;
-  backdrop-filter: blur(15px);
+export const Content = styled.div`
+  display: none;
+  @media (max-width: 1100px) {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    backdrop-filter: blur(15px);
+  }
+`;
+
+export const Logo = styled.div`
+  color: white;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 80px;
 `;
 
 export const Nav = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  z-index: 1;
+  display: none;
+  @media (max-width: 1100px) {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
 
-  background: transparent;
-  width: 100%;
+    backdrop-filter: blur(15px);
+    background: transparent;
+    height: 100%;
+    width: 100%;
+  }
+`;
+
+export const Navlist = styled(motion.ul)`
+  color: #fff;
+  height: 100%;
 `;
 
 export const NavItems = styled(motion.li)`
@@ -25,13 +47,15 @@ export const NavItems = styled(motion.li)`
 
 export const MenuIcon = styled(motion.div)`
   display: none;
-  @media (max-width: 1100px) {
-    display: flex;
-    position: fixed;
-    height: 88px;
-    color: #fff;
-    justify-content: flex-end;
-    cursor: pointer;
-    width: 40px;
-  }
+  display: flex;
+  color: white;
+  cursor: pointer;
+
+  width: 50px;
+`;
+
+export const CloseMenuIcon = styled(motion.div)`
+  cursor: pointer;
+  align-self: flex-end;
+  width: 100px;
 `;

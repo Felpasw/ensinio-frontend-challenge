@@ -3,16 +3,22 @@ import { useState } from 'react';
 
 import * as S from './styles';
 import IconMenu from '../../../assets/IconMenu';
+import IconClose from '../../../assets/IconClose';
+import EnsionioLogo from '../../../assets/EnsinioLogo';
 
 export default function MobileMenu() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <AnimatePresence>
-      <S.Nav>
+      <S.Content>
+        <S.Logo>
+          <EnsionioLogo />
+        </S.Logo>
+
         <S.MenuIcon
           whileTap={{
-            scale: 2,
+            scale: 1.5,
           }}
           onClick={() => {
             setIsVisible(!isVisible);
@@ -20,8 +26,10 @@ export default function MobileMenu() {
         >
           <IconMenu />
         </S.MenuIcon>
+      </S.Content>
 
-        {isVisible && (
+      {isVisible && (
+        <S.Nav>
           <S.Navlist>
             <S.NavItems
               initial={{
@@ -42,11 +50,19 @@ export default function MobileMenu() {
                 opacity: 0,
               }}
             >
+              <S.CloseMenuIcon
+                onClick={() => setIsVisible(!isVisible)}
+                whileTap={{
+                  scale: 1.5,
+                }}
+              >
+                <IconClose />
+              </S.CloseMenuIcon>
               Bom dia
             </S.NavItems>
           </S.Navlist>
-        )}
-      </S.Nav>
+        </S.Nav>
+      )}
     </AnimatePresence>
   );
 }
