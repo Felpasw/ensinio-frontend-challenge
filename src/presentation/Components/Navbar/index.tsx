@@ -12,6 +12,10 @@ import IconApp from '../../../assets/IconApp';
 import * as textContent from '../../../textContent';
 
 import * as S from './styles';
+import IconBrazil from '../../../assets/IconBrazil';
+import IconUSA from '../../../assets/IconUSA';
+import IconSpain from '../../../assets/IconSpain';
+import IconChecked from '../../../assets/IconChecked';
 
 const solutionsList = [
   {
@@ -110,25 +114,28 @@ export default function Navbar() {
           </S.NavItem>
 
           <S.Buttton>Começar agora</S.Buttton>
-          <S.NavItem onClick={() => setLanguagesIsVisable(!laguagesIsVisable)}>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignSelf: 'center',
-              }}
-            >
-              <div> PT </div>
-              <div style={{ marginLeft: '7%' }}>
-                <IconTriangle />
-              </div>
-            </div>
-          </S.NavItem>
-          {laguagesIsVisable && (
-            <S.LaguagesContainer>
-              <S.LanguagesItem></S.LanguagesItem>
-            </S.LaguagesContainer>
-          )}
+          <S.LanguageSelector
+            onClick={() => setLanguagesIsVisable(!laguagesIsVisable)}
+          >
+            <div> PT </div>
+            <IconTriangle />
+
+            {laguagesIsVisable && (
+              <S.LaguagesContainer>
+                <S.LanguagesItem>
+                  <IconBrazil /> PT <IconChecked />
+                </S.LanguagesItem>
+
+                <S.LanguagesItem>
+                  <IconUSA /> EN <IconChecked />
+                </S.LanguagesItem>
+
+                <S.LanguagesItem>
+                  <IconSpain /> ES <IconChecked />
+                </S.LanguagesItem>
+              </S.LaguagesContainer>
+            )}
+          </S.LanguageSelector>
         </S.Navlist>
       </S.Nav>
     </AnimatePresence>

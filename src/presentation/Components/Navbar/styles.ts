@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   width: 100%;
   position: fixed;
   z-index: 1;
-  @media (max-width: 999px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;
@@ -137,26 +137,42 @@ export const SolutionsContainer = styled.div`
   padding: 2.3rem 2.5rem;
 `;
 
-export const LaguagesContainer = styled.div`
-  z-index: 1;
-  top: 2.1rem;
+export const LanguageSelector = styled.button`
   position: relative;
-  margin-right: 3rem;
-  margin-top: 3rem;
-  border-radius: 0.375rem;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: #fff;
+  background: transparent;
+
+  border: none;
+`;
+
+export const LaguagesContainer = styled.div`
+  width: 100px;
+
+  padding: 8px;
+
+  border-radius: 6px;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+
+  background: #ffff;
+
   display: block;
 `;
 
 export const LanguagesItem = styled.div`
-  border: none;
-  height: 3rem;
-  display: flex;
-  width: 8.625rem;
-  cursor: pointer;
-  background: rgb(255, 255, 255);
-  position: relative;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
+  font-size: 16px;
+  color: #000;
+  width: 100%;
+  padding: 6px;
 `;
