@@ -1,12 +1,13 @@
 import AudioPlayIcon from '../../../assets/AudioPlayIcon';
 import IconCertified from '../../../assets/IconCertified';
 import IconPlaylist from '../../../assets/IconPlaylist';
-import MediaLogo from '../../../assets/MediaLogo';
+import MediaLogo from '../../../assets/IconMediaLogo';
 
 import * as textContent from '../../../textContent';
 import * as S from './styles';
 
 import PersonImg from '../../../assets/PersonImg/index.png';
+import CirgleSVG from '../../../assets/CircleSVG';
 
 const logoList = [<IconPlaylist />, <IconCertified />, <IconPlaylist />];
 

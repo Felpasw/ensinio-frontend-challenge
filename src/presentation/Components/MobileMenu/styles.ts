@@ -2,21 +2,20 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Navlist = styled(motion.ul)`
-  @media (max-width: 999px) {
-    display: flex;
-    list-style: none;
-    position: absolute;
-    top: 10.5vh;
-    right: 0px;
-    width: auto;
-    height: 92vh;
-    overflow: hidden;
-    background-color: #23232e;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    float: right;
-  }
+  color: #fff;
+  height: 100%;
+  background: transparent;
+  backdrop-filter: blur(15px);
+`;
+
+export const Nav = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 1;
+
+  background: transparent;
+  width: 100%;
 `;
 
 export const NavItems = styled(motion.li)`
@@ -24,12 +23,15 @@ export const NavItems = styled(motion.li)`
   margin-left: 32px;
 `;
 
-export const MenuIcon = styled.div`
-  cursor: pointer;
+export const MenuIcon = styled(motion.div)`
   display: none;
-  color: #fff;
-  @media (max-width: 999px) {
-    display: block;
-    opacity: 100;
+  @media (max-width: 1100px) {
+    display: flex;
+    position: fixed;
+    height: 88px;
+    color: #fff;
+    justify-content: flex-end;
+    cursor: pointer;
+    width: 40px;
   }
 `;
