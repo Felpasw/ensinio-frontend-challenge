@@ -5,6 +5,10 @@ import * as S from './styles';
 import IconMenu from '../../../assets/IconMenu';
 import IconClose from '../../../assets/IconClose';
 import EnsionioLogo from '../../../assets/EnsinioLogo';
+import IconTriangle from '../../../assets/IconTriagle';
+import IconBrazil from '../../../assets/IconBrazil';
+import UserProfileLogo from '../../../assets/UserProfileLogo';
+import { NavItemsList } from '../../../textContent';
 
 export default function MobileMenu() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,26 +34,16 @@ export default function MobileMenu() {
 
       {isVisible && (
         <S.Nav>
-          <S.Navlist>
-            <S.NavItems
-              initial={{
-                scale: 0,
-                opacity: 0,
-              }}
-              animate={{
-                scale: 1,
-                opacity: 1,
-              }}
-              transition={
-                {
-                  // delay: element.Delay,
-                }
-              }
-              exit={{
-                scale: 0,
-                opacity: 0,
-              }}
-            >
+          <S.TopContent>
+            <S.RightTopContent>
+              <S.CurrentLanguage>
+                <IconBrazil />
+                <h4>PT </h4>
+                <IconTriangle />
+              </S.CurrentLanguage>
+
+              <hr style={{ height: '20px', alignSelf: 'center' }} />
+
               <S.CloseMenuIcon
                 onClick={() => setIsVisible(!isVisible)}
                 whileTap={{
@@ -58,9 +52,29 @@ export default function MobileMenu() {
               >
                 <IconClose />
               </S.CloseMenuIcon>
-              Bom dia
-            </S.NavItems>
-          </S.Navlist>
+            </S.RightTopContent>
+
+            <S.LeftTopContent>
+              <S.UserProfileLogo>
+                <UserProfileLogo />
+              </S.UserProfileLogo>
+
+              <h4>Entrar</h4>
+            </S.LeftTopContent>
+          </S.TopContent>
+          <S.MenuContent>
+            {NavItemsList.map((element) => (
+              <S.MenuOption>
+                <hr style={{ borderColor: '#41b5d9', width: '100%' }} />
+                {element.content}
+              </S.MenuOption>
+            ))}
+            <S.SolutionsDropdown>
+              <hr style={{ borderColor: '#41b5d9', width: '100%' }} />
+              Soluções <IconTriangle />
+            </S.SolutionsDropdown>
+          </S.MenuContent>
+          <S.Button> Começar agora</S.Button>
         </S.Nav>
       )}
     </AnimatePresence>
