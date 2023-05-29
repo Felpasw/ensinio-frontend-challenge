@@ -4,11 +4,30 @@ export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   background: linear-gradient(259.95deg, #41b5d9 2.25%, #5f41d9 100.27%);
+  z-index: -1;
 `;
 
 export const Img = styled.img`
-  width: 70.43vh;
-  height: 70.97vh;
+  position: absolute;
+  bottom: 0;
+  right: 170px;
+  width: 60.43vh;
+  height: 60.97vh;
+  @media (max-width: 1100px) {
+    position: relative;
+    right: 0;
+  }
+`;
+
+export const CircleSVG = styled.div`
+  position: absolute;
+  left: 90vh;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  @media (max-width: 1100px) {
+    left: 2vh;
+  }
 `;
 
 export const Logos = styled.div`
@@ -19,7 +38,14 @@ export const Logos = styled.div`
 `;
 
 export const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
   margin: 5%;
+  max-width: 100%;
+  @media (max-width: 999px) {
+    margin-left: 10%;
+    align-items: center;
+  }
 `;
 
 export const TopTitleContent = styled.div`
@@ -31,7 +57,6 @@ export const TopTitleContent = styled.div`
   height: 2.26vh;
   font-size: 2vh;
   color: #ffff;
-  margin-left: 16px;
   text-transform: uppercase;
 `;
 
@@ -44,12 +69,14 @@ export const Title = styled.h1`
   line-height: 110%;
   letter-spacing: -0.03em;
   margin-top: 44px;
+  max-width: 100%;
 `;
 
 export const Subtitle = styled.h2`
   margin-top: 44px;
   font-weight: 400;
   font-size: 2.13vh;
+  max-width: 100%;
   color: #ffff;
   line-height: 150%;
   width: 55.39vh;
@@ -68,11 +95,11 @@ export const Button = styled.button`
   border: 2px solid #00e1e7;
   outline: none;
   transition: 0.15s ease-in-out;
-  /* &:hover {
+  &:hover {
     background: transparent;
-    border:#00E1E7 2px solid; 
-    color: black;
-} */
+    border: #00e1e7 2px solid;
+    color: #00e1e7;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -99,12 +126,27 @@ export const SeeVideoContentText = styled.h2`
   align-self: center;
 `;
 
+export const UnionSVGTop = styled.div`
+  position: absolute;
+  left: 150px;
+  right: 0;
+  bottom: 30px;
+`;
+
+export const UnionSVGBottom = styled.div`
+  position: relative;
+  left: 30px;
+  right: 0;
+  top: 70px;
+`;
+
 export const MainContentElements = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  @media (max-width: 999px) {
+  position: relative;
+  justify-content: start;
+  align-items: center;
+  @media (max-width: 1100px) {
     flex-direction: column;
-    margin: 0;
   }
 `;
