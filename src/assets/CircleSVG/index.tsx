@@ -1,8 +1,8 @@
 export default function CirgleSVG() {
   return (
     <svg
-      width="659"
-      height="484"
+      width="92.16vh"
+      height="67.69vh"
       viewBox="0 0 659 484"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
