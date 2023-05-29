@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import EnsionioLogo from '../../../assets/EnsinioLogo';
 import UserProfileLogo from '../../../assets/UserProfileLogo';
