@@ -39,7 +39,7 @@ export default function HeroSection() {
           </S.Buttons>
         </S.TextContent>
 
-        <S.CircleSVG>
+        {/* <S.CircleSVG>
           <CirgleSVG />
         </S.CircleSVG>
 
@@ -49,7 +49,7 @@ export default function HeroSection() {
 
         <S.UnionSVGBottom>
           <UnionSVGBottom />
-        </S.UnionSVGBottom>
+        </S.UnionSVGBottom> */}
 
         <S.Img src={PersonImg} />
       </S.MainContentElements>
