@@ -1,8 +1,8 @@
-import { AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useContext, useState } from 'react';
 
 import * as S from './styles';
+import * as textContent from '../../../textContent';
 
 import { NavItemsList } from '../../../textContent';
 
@@ -12,39 +12,18 @@ import IconTriangle from '../../../assets/IconTriagle';
 import EnsionioLogo from '../../../assets/EnsinioLogo';
 import IconMenu from '../../../assets/IconMenu';
 import IconClose from '../../../assets/IconClose';
-import IconEad from '../../../assets/IconEad';
-import IconApp from '../../../assets/IconApp';
-import IconGamification from '../../../assets/IconGamification';
-import IconSocial from '../../../assets/IconSocial';
 
-const solutionsList = [
-  {
-    icon: <IconEad />,
-    title: 'Crie uma Escola Online',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    icon: <IconGamification />,
-    title: 'Gamificação',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    icon: <IconSocial />,
-    title: 'Comunidade e rede social',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    icon: <IconApp />,
-    title: 'Aplicativo mobile',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-];
+import { LangContextType } from '../../../@types/lang';
+import { LanguageContext } from '../../../context/Lang';
+import IconUSA from '../../../assets/IconUSA';
+import IconSpain from '../../../assets/IconSpain';
+import LanguageMenu from '../LanguageMenu';
 
 export default function MobileMenu() {
   const [isVisible, setIsVisible] = useState(false);
   const [languageIsVisible, setLanguageIsVisible] = useState(false);
   const [solutionIsVisible, setSolutionIsVisible] = useState(false);
-  const { t } = useTranslation();
+  const lang: LangContextType = useContext(LanguageContext);
 
   return (
     <AnimatePresence>
@@ -72,15 +51,40 @@ export default function MobileMenu() {
               <S.CurrentLanguage
                 onClick={() => setLanguageIsVisible(!languageIsVisible)}
               >
-                <IconBrazil />
-                <h4>PT </h4>
-                <IconTriangle />
+                {lang.state === 'pt' ? (
+                  <>
+                    <IconBrazil />
+                    <h4>{lang.state.toUpperCase()}</h4>
+                    <IconTriangle />
+                    {languageIsVisible && <LanguageMenu />}
+                  </>
+                ) : lang.state === 'en' ? (
+                  <>
+                    <IconUSA />
+                    <h4>{lang.state.toUpperCase()}</h4>
+                    <IconTriangle />
+                    {languageIsVisible && <LanguageMenu />}
+                  </>
+                ) : (
+                  <>
+                    <IconSpain />
+                    <h4>{lang.state.toUpperCase()}</h4>
+                    <IconTriangle />
+                    {languageIsVisible && <LanguageMenu />}
+                  </>
+                )}
               </S.CurrentLanguage>
-              {languageIsVisible && <>cuzinho</>}
               <hr style={{ height: '20px', alignSelf: 'center' }} />
 
               <S.CloseMenuIcon
-                onClick={() => setIsVisible(!isVisible)}
+                onClick={() => {
+                  setIsVisible(!isVisible);
+                  languageIsVisible ? (
+                    setLanguageIsVisible(!languageIsVisible)
+                  ) : (
+                    <></>
+                  );
+                }}
                 whileTap={{
                   scale: 1.5,
                 }}
@@ -94,33 +98,74 @@ export default function MobileMenu() {
                 <UserProfileLogo />
               </S.UserProfileLogo>
 
-              <h4>Entrar</h4>
+              <h4>{textContent.LoginText[lang.state]}</h4>
             </S.LeftTopContent>
           </S.TopContent>
 
           <S.MenuContent>
             <S.SolutionsDropdown
               onClick={() => setSolutionIsVisible(!solutionIsVisible)}
+              initial={{
+                opacity: 0,
+                x: 100,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.2,
+              }}
             >
               <hr style={{ borderColor: '#41b5d9', width: '100%' }} />
-              Soluções <IconTriangle />
+              {textContent.SolutionsText[lang.state]}
+              <IconTriangle />
             </S.SolutionsDropdown>
             {solutionIsVisible &&
-              solutionsList.map((element) => (
-                <>
-                  {element.title} {element.icon}
-                  {element.descripton}
-                </>
+              textContent.solutionsList.map((element) => (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    x: 100,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.2,
+                  }}
+                >
+                  <S.SolutionsTitle>
+                    {element.icon} {element.title[lang.state]}
+                  </S.SolutionsTitle>
+                  {element.descripton[lang.state]}
+                </motion.div>
               ))}
 
             {NavItemsList.map((element) => (
-              <S.MenuOption>
+              <S.MenuOption
+                initial={{
+                  opacity: 0,
+                  x: 100,
+                }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2,
+                }}
+              >
                 <hr style={{ borderColor: '#41b5d9', width: '100%' }} />
-                {element.content}
+                {element.content[lang.state]}
               </S.MenuOption>
             ))}
           </S.MenuContent>
-          <S.Button> Começar agora</S.Button>
+          <S.Button> {textContent.BtnText[lang.state]}</S.Button>
         </S.Nav>
       )}
     </AnimatePresence>

@@ -10,10 +10,15 @@ import PersonImg from '../../../assets/PersonImg/index.png';
 import CirgleSVG from '../../../assets/CircleSVG';
 import UnionSVGTop from '../../../assets/UnionSVGTop';
 import UnionSVGBottom from '../../../assets/UnionSVGBottom';
+import { LangContextType } from '../../../@types/lang';
+import { LanguageContext } from '../../../context/Lang';
+import { useContext } from 'react';
 
 const logoList = [<IconPlaylist />, <IconCertified />, <IconPlaylist />];
 
 export default function HeroSection() {
+  const lang: LangContextType = useContext(LanguageContext);
+
   return (
     <S.MainContent>
       <S.Logos>{logoList.map((element) => element)}</S.Logos>
@@ -21,20 +26,22 @@ export default function HeroSection() {
       <S.MainContentElements>
         <S.TextContent>
           <S.TopTitleContent>
-            <MediaLogo /> {textContent.TopTiTleText}
+            <MediaLogo /> {textContent.TopTiTleText[lang.state]}
           </S.TopTitleContent>
 
-          <S.Title>{textContent.TitleText}</S.Title>
+          <S.Title>{textContent.TitleText[lang.state]}</S.Title>
 
-          <S.Subtitle>{textContent.SubtitleText}</S.Subtitle>
+          <S.Subtitle>{textContent.SubtitleText[lang.state]}</S.Subtitle>
 
           <S.Buttons>
-            <S.Button> Começar agora</S.Button>
+            <S.Button> {textContent.BtnText[lang.state]}</S.Button>
             <S.SeeVideoContent>
               <div style={{ alignSelf: 'center' }}>
                 <AudioPlayIcon />
               </div>
-              <S.SeeVideoContentText>Ver vídeo</S.SeeVideoContentText>
+              <S.SeeVideoContentText>
+                {textContent.SeeVideoText[lang.state]}
+              </S.SeeVideoContentText>
             </S.SeeVideoContent>
           </S.Buttons>
         </S.TextContent>

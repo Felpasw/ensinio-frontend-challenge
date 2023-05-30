@@ -4,45 +4,20 @@ import { useState, useContext } from 'react';
 import EnsionioLogo from '../../../assets/EnsinioLogo';
 import UserProfileLogo from '../../../assets/UserProfileLogo';
 import IconTriangle from '../../../assets/IconTriagle';
-import IconGamification from '../../../assets/IconGamification';
-import IconEad from '../../../assets/IconEad';
-import IconSocial from '../../../assets/IconSocial';
-import IconApp from '../../../assets/IconApp';
 
 import * as textContent from '../../../textContent';
 
 import * as S from './styles';
-import IconBrazil from '../../../assets/IconBrazil';
-import IconUSA from '../../../assets/IconUSA';
-import IconSpain from '../../../assets/IconSpain';
-import IconChecked from '../../../assets/IconChecked';
 
-const solutionsList = [
-  {
-    icon: <IconEad />,
-    title: 'Crie uma Escola Online',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    icon: <IconGamification />,
-    title: 'Gamificação',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    icon: <IconSocial />,
-    title: 'Comunidade e rede social',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    icon: <IconApp />,
-    title: 'Aplicativo mobile',
-    descripton: 'Lorem ipsum dolor sit amet',
-  },
-];
+import { LangContextType } from '../../../@types/lang';
+import { LanguageContext } from '../../../context/Lang';
+import LanguageMenu from '../LanguageMenu';
 
 export default function Navbar() {
   const [solutionsIsVisible, setSolutionsIsVisible] = useState(false);
   const [laguagesIsVisable, setLanguagesIsVisable] = useState(false);
+  const lang: LangContextType = useContext(LanguageContext);
+  console.log(lang.state);
 
   return (
     <AnimatePresence>
@@ -59,7 +34,7 @@ export default function Navbar() {
                 alignSelf: 'center',
               }}
             >
-              <div>Soluções</div>
+              <div>{textContent.SolutionsText[lang.state]}</div>
               <div style={{ marginLeft: '7%' }}>
                 <IconTriangle />
               </div>
@@ -69,26 +44,45 @@ export default function Navbar() {
           {solutionsIsVisible && (
             <S.DropdownMenu>
               <S.SolutionsContainer>
-                <S.Title>Soluções Principais </S.Title>
+                <S.Title>{textContent.SolutionsTitle[lang.state]}</S.Title>
                 <S.Solutions>
-                  {solutionsList.map((element) => (
-                    <S.SolutionsItem>
+                  {textContent.solutionsList.map((element) => (
+                    <S.SolutionsItem
+                      initial={{
+                        opacity: 0,
+                        x: 50,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      whileHover={{
+                        scale: 1.1,
+                        opacity: 0.75,
+                      }}
+                    >
                       <S.SolutionsTitle>
                         <div
                           style={{
                             display: 'flex',
                             flexDirection: 'row',
+                            width: '100%',
                           }}
                         >
                           <div style={{ alignSelf: 'center' }}>
                             {element.icon}
                           </div>
-                          <div style={{ alignSelf: 'center' }}>
-                            {element.title}
+                          <div style={{ alignSelf: 'center', width: '100%' }}>
+                            {element.title[lang.state]}
                           </div>
                         </div>
                       </S.SolutionsTitle>
-                      {element.descripton}
+                      <S.SolutionsDescription>
+                        {element.descripton[lang.state]}
+                      </S.SolutionsDescription>
                     </S.SolutionsItem>
                   ))}
                 </S.Solutions>
@@ -98,7 +92,7 @@ export default function Navbar() {
 
           {textContent.NavItemsList.map((element) => (
             <S.NavItems>
-              <S.NavItem> {element.content} </S.NavItem>
+              <S.NavItem> {element.content[lang.state]} </S.NavItem>
             </S.NavItems>
           ))}
 
@@ -109,32 +103,18 @@ export default function Navbar() {
               <S.EnterItem>
                 <UserProfileLogo />
               </S.EnterItem>
-              <S.EnterItem>Entrar</S.EnterItem>
+              <S.EnterItem>{textContent.LoginText[lang.state]}</S.EnterItem>
             </S.EnterContent>
           </S.NavItem>
 
-          <S.Buttton>Começar agora</S.Buttton>
+          <S.Buttton>{textContent.BtnText[lang.state]}</S.Buttton>
           <S.LanguageSelector
             onClick={() => setLanguagesIsVisable(!laguagesIsVisable)}
           >
-            <div> PT </div>
+            <div style={{ fontSize: '2vh' }}> {lang.state.toUpperCase()} </div>
             <IconTriangle />
 
-            {laguagesIsVisable && (
-              <S.LaguagesContainer>
-                <S.LanguagesItem>
-                  <IconBrazil /> PT <IconChecked />
-                </S.LanguagesItem>
-
-                <S.LanguagesItem>
-                  <IconUSA /> EN <IconChecked />
-                </S.LanguagesItem>
-
-                <S.LanguagesItem>
-                  <IconSpain /> ES <IconChecked />
-                </S.LanguagesItem>
-              </S.LaguagesContainer>
-            )}
+            {laguagesIsVisable && <LanguageMenu />}
           </S.LanguageSelector>
         </S.Navlist>
       </S.Nav>
