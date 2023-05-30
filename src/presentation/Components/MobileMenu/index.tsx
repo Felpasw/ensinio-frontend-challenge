@@ -52,26 +52,29 @@ export default function MobileMenu() {
                 onClick={() => setLanguageIsVisible(!languageIsVisible)}
               >
                 {lang.state === 'pt' ? (
-                  <>
+                  <S.LanguageSelector>
                     <IconBrazil />
                     <h4>{lang.state.toUpperCase()}</h4>
                     <IconTriangle />
+
                     {languageIsVisible && <LanguageMenu />}
-                  </>
+                  </S.LanguageSelector>
                 ) : lang.state === 'en' ? (
-                  <>
+                  <S.LanguageSelector>
                     <IconUSA />
                     <h4>{lang.state.toUpperCase()}</h4>
                     <IconTriangle />
+
                     {languageIsVisible && <LanguageMenu />}
-                  </>
+                  </S.LanguageSelector>
                 ) : (
-                  <>
+                  <S.LanguageSelector>
                     <IconSpain />
                     <h4>{lang.state.toUpperCase()}</h4>
                     <IconTriangle />
+
                     {languageIsVisible && <LanguageMenu />}
-                  </>
+                  </S.LanguageSelector>
                 )}
               </S.CurrentLanguage>
               <hr style={{ height: '20px', alignSelf: 'center' }} />
@@ -137,6 +140,11 @@ export default function MobileMenu() {
                     duration: 0.5,
                     delay: 0.2,
                   }}
+                  whileHover={{
+                    scale: 1.1,
+                    opacity: 0.7,
+                  }}
+                  style={{ cursor: 'pointer' }}
                 >
                   <S.SolutionsTitle>
                     {element.icon} {element.title[lang.state]}

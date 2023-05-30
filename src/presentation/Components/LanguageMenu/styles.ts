@@ -41,9 +41,8 @@ export const LaguagesContainer = styled(motion.div)`
   display: block;
 
   @media (max-width: 1100px) {
-    position: fixed;
-    top: 200px;
-    left: 400px;
+    top: 30px;
+    left: -9px;
   }
 `;
 
