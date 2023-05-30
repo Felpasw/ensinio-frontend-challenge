@@ -141,14 +141,21 @@ export const Button = styled.button`
   border-radius: 100px;
   font-size: 3vh;
   height: 7.45vh;
-  margin-top: 30px;
+  margin-top: 60px;
   width: 50vh;
   cursor: pointer;
   max-width: 100%;
   background: #00e1e7;
   border: 2px solid #00e1e7;
   outline: none;
+  padding: 2%;
   align-self: center;
+  transition: 0.15s ease-in-out;
+  &:hover {
+    background: transparent;
+    border: #00e1e7 2px solid;
+    color: #00e1e7;
+  }
 `;
 
 export const DivLanguageMenu = styled.div`

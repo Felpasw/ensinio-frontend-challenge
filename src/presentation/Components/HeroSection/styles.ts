@@ -154,7 +154,6 @@ export const HeroContent = styled.div`
   right: 190px;
   width: 60.43vh;
   height: 60.97vh;
-  max-width: 100%;
   @media (max-width: 1100px) {
     position: relative;
     left: -90px;

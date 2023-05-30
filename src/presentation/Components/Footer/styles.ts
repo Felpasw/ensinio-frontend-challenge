@@ -5,6 +5,7 @@ export const SeeMoreText = styled.h2`
   font-size: 2.13vh;
   margin-right: 5px;
   line-height: 125%;
+  padding: 2%;
   cursor: pointer;
 `;
 
