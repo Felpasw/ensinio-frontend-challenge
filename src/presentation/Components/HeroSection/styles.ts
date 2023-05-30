@@ -60,6 +60,7 @@ export const TopTitleContent = styled.div`
 export const Title = styled.h1`
   font-weight: 500;
   font-size: 5.85vh;
+  margin-bottom: 12px;
   color: #ffffff;
   width: 66.44vh;
   height: 12.78vh;
@@ -154,6 +155,7 @@ export const HeroContent = styled.div`
   right: 190px;
   width: 60.43vh;
   height: 60.97vh;
+
   @media (max-width: 1100px) {
     position: relative;
     left: -90px;
