@@ -10,23 +10,20 @@ export const MainContent = styled.div`
 export const Img = styled.img`
   position: absolute;
   bottom: 0;
-  right: 170px;
+  left: 100px;
   width: 60.43vh;
   height: 60.97vh;
-  @media (max-width: 1100px) {
-    position: relative;
-    right: 0;
-  }
+  max-width: 100%;
 `;
 
 export const CircleSVG = styled.div`
   position: absolute;
-  left: 90vh;
+  right: 500px;
   bottom: 0;
   right: 0;
   max-width: 100%;
+  overflow: hidden;
   @media (max-width: 1100px) {
-    left: 2vh;
   }
 `;
 
@@ -128,16 +125,16 @@ export const SeeVideoContentText = styled.h2`
 
 export const UnionSVGTop = styled.div`
   position: absolute;
-  left: 150px;
+  left: 300px;
+  top: 60px;
   right: 0;
-  bottom: 30px;
 `;
 
 export const UnionSVGBottom = styled.div`
   position: relative;
-  left: 30px;
+  left: 60px;
   right: 0;
-  top: 70px;
+  top: 200px;
 `;
 
 export const MainContentElements = styled.div`
@@ -148,5 +145,18 @@ export const MainContentElements = styled.div`
   align-items: center;
   @media (max-width: 1100px) {
     flex-direction: column;
+  }
+`;
+
+export const HeroContent = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 190px;
+  width: 60.43vh;
+  height: 60.97vh;
+  max-width: 100%;
+  @media (max-width: 1100px) {
+    position: relative;
+    left: -90px;
   }
 `;

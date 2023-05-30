@@ -150,3 +150,28 @@ export const Button = styled.button`
   outline: none;
   align-self: center;
 `;
+
+export const DivLanguageMenu = styled.div`
+  position: relative;
+  gap: 8px;
+  padding: 5%;
+  padding-top: 40px;
+  bottom: 111;
+  left: 15;
+`;
+
+export const LanguageSelector = styled.button`
+  position: relative;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: #fff;
+  background: transparent;
+
+  border: none;
+`;

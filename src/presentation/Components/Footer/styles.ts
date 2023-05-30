@@ -23,7 +23,8 @@ export const Footer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
-  width: 100%;
+  width: 90%;
+  overflow: hidden;
   @media (max-width: 999px) {
     flex-direction: column;
   }

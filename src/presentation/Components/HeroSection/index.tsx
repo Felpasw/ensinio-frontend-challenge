@@ -20,7 +20,7 @@ export default function HeroSection() {
   const lang: LangContextType = useContext(LanguageContext);
 
   return (
-    <S.MainContent>
+    <S.MainContent data-testid="HeroSection">
       <S.Logos>{logoList.map((element) => element)}</S.Logos>
 
       <S.MainContentElements>
@@ -45,20 +45,21 @@ export default function HeroSection() {
             </S.SeeVideoContent>
           </S.Buttons>
         </S.TextContent>
+        <S.HeroContent>
+          <S.CircleSVG>
+            <CirgleSVG />
+          </S.CircleSVG>
 
-        {/* <S.CircleSVG>
-          <CirgleSVG />
-        </S.CircleSVG>
+          <S.UnionSVGTop>
+            <UnionSVGTop />
+          </S.UnionSVGTop>
 
-        <S.UnionSVGTop>
-          <UnionSVGTop />
-        </S.UnionSVGTop>
+          <S.UnionSVGBottom>
+            <UnionSVGBottom />
+          </S.UnionSVGBottom>
 
-        <S.UnionSVGBottom>
-          <UnionSVGBottom />
-        </S.UnionSVGBottom> */}
-
-        <S.Img src={PersonImg} />
+          <S.Img src={PersonImg} />
+        </S.HeroContent>
       </S.MainContentElements>
     </S.MainContent>
   );

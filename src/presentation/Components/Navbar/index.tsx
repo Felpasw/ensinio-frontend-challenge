@@ -17,7 +17,6 @@ export default function Navbar() {
   const [solutionsIsVisible, setSolutionsIsVisible] = useState(false);
   const [laguagesIsVisable, setLanguagesIsVisable] = useState(false);
   const lang: LangContextType = useContext(LanguageContext);
-  console.log(lang.state);
 
   return (
     <AnimatePresence>
@@ -42,7 +41,17 @@ export default function Navbar() {
           </S.NavItem>
 
           {solutionsIsVisible && (
-            <S.DropdownMenu>
+            <S.DropdownMenu
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+            >
               <S.SolutionsContainer>
                 <S.Title>{textContent.SolutionsTitle[lang.state]}</S.Title>
                 <S.Solutions>
