@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build && json-server db.json",
+    "build": "vite build",
     "serve": "vite preview",
     "start-dev": "json-server --watch db.json",
     "test": "vitest"
