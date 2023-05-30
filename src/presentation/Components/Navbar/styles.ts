@@ -88,13 +88,13 @@ export const Div = styled.div`
 
 export const EnterItem = styled.h4`
   margin-left: 8px;
-  font-size: 15px;
+  font-size: 2vh;
   color: #ffffff;
   font-style: normal;
   align-self: center;
 `;
 
-export const DropdownMenu = styled.div`
+export const DropdownMenu = styled(motion.div)`
   display: flex;
   z-index: 1;
   position: absolute;
@@ -106,17 +106,26 @@ export const DropdownMenu = styled.div`
 export const Solutions = styled(motion.div)`
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
   width: max-content;
 `;
 
-export const SolutionsItem = styled.div``;
+export const SolutionsItem = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  padding: 4%;
+  width: 100%;
+`;
 
 export const SolutionsTitle = styled.h2`
   color: #130c25;
   font-size: 2vh;
-  margin: 6%;
+  width: 100%;
+  margin: 2%;
   align-self: center;
   font-weight: 600;
 `;
@@ -134,7 +143,8 @@ export const Title = styled.h1`
 export const SolutionsContainer = styled.div`
   background-color: #ffff;
   border-radius: 10px;
-  padding: 2.3rem 2.5rem;
+  padding: 2vh;
+  margin-top: 2vh;
 `;
 
 export const LanguageSelector = styled.button`
@@ -154,15 +164,18 @@ export const LanguageSelector = styled.button`
 `;
 
 export const LaguagesContainer = styled.div`
-  width: 100px;
+  cursor: pointer;
 
-  padding: 8px;
+  width: 13.31vh;
+
+  padding: 1.06px;
 
   border-radius: 6px;
 
   position: absolute;
   top: 100%;
   right: 0;
+  left: -40px;
   z-index: 1;
 
   background: #ffff;
@@ -171,8 +184,15 @@ export const LaguagesContainer = styled.div`
 `;
 
 export const LanguagesItem = styled.div`
-  font-size: 16px;
+  font-size: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   color: #000;
   width: 100%;
   padding: 6px;
+`;
+export const SolutionsDescription = styled.h2`
+  font-size: 1.5vh;
+  margin-left: 2%;
 `;

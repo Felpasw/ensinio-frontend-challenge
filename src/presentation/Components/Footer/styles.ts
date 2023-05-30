@@ -11,6 +11,7 @@ export const SeeMoreText = styled.h2`
 export const SeeMoreContent = styled.div`
   display: flex;
   flex-direction: row;
+  margin-right: 10%;
   align-self: center;
   margin-top: 3%;
 `;
@@ -22,6 +23,7 @@ export const Footer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
+  width: 100%;
   @media (max-width: 999px) {
     flex-direction: column;
   }
@@ -40,5 +42,6 @@ export const FooterText = styled.h2`
 export const FooterTitleContent = styled.div`
   display: flex;
   flex-direction: row;
+  align-self: center;
   max-width: 100%;
 `;

@@ -62,7 +62,7 @@ export const CloseMenuIcon = styled(motion.div)`
   cursor: pointer;
 
   align-self: flex-end;
-  width: 40px;
+  width: 60%;
 
   padding: 2%;
 `;
@@ -71,7 +71,7 @@ export const TopContent = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  height: 60px;
+  height: 8vh;
   width: 100%;
 `;
 
@@ -80,7 +80,7 @@ export const RightTopContent = styled.div`
   flex-direction: row;
   align-self: center;
   justify-content: end;
-  width: 300px;
+  width: 20vh;
 `;
 
 export const CurrentLanguage = styled.div`
@@ -89,18 +89,19 @@ export const CurrentLanguage = styled.div`
   justify-content: space-between;
   cursor: pointer;
   padding: 4%;
-  width: 60px;
+  width: 100%;
   color: #ffff;
   align-items: center;
 `;
 
 export const LeftTopContent = styled.div`
   display: flex;
+  cursor: pointer;
   flex-direction: row;
   color: #fff;
   margin-left: 7%;
   align-self: center;
-  font-size: 20px;
+  font-size: 3vh;
 `;
 
 export const UserProfileLogo = styled.div`
@@ -110,29 +111,37 @@ export const UserProfileLogo = styled.div`
 export const MenuContent = styled.div`
   display: flex;
   margin: 5%;
+  padding: 3%;
   color: #ffff;
   height: 400px;
   flex-direction: column;
 `;
 
-export const MenuOption = styled.div`
+export const MenuOption = styled(motion.div)`
   font-size: 4.19vh;
   width: 100%;
   cursor: pointer;
   height: 100%;
 `;
 
-export const SolutionsDropdown = styled.div`
+export const SolutionsDropdown = styled(motion.div)`
   font-size: 4.19vh;
   width: 100%;
   cursor: pointer;
   height: 100%;
+`;
+
+export const SolutionsTitle = styled.div`
+  display: flex;
+  font-size: 3vh;
+  flex-direction: row;
 `;
 
 export const Button = styled.button`
   border-radius: 100px;
   font-size: 3vh;
   height: 7.45vh;
+  margin-top: 30px;
   width: 50vh;
   cursor: pointer;
   max-width: 100%;

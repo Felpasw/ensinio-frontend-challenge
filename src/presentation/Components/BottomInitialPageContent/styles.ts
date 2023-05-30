@@ -18,7 +18,7 @@ export const BottomTopTitles = styled.div`
 export const BottomContentTitle = styled.h1`
   font-size: 4.26vh;
   color: #130c25;
-  margin: 5%;
+  margin: 3%;
 `;
 
 export const BottomTopTitle = styled.h2`

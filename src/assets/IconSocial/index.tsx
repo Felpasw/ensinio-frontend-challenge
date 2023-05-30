@@ -1,8 +1,8 @@
 export default function IconSocial() {
   return (
     <svg
-      width="40"
-      height="40"
+      width="5.32vh"
+      height="5.32vh"
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
