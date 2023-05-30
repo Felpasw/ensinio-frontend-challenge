@@ -5,7 +5,7 @@ import IconFolder from '../../../assets/IconFolder';
 import * as S from './styles';
 import { useEffect, useState, useContext } from 'react';
 
-import { Lang, LangContextType, items } from '../../../@types/lang';
+import { LangContextType, items } from '../../../@types/lang';
 import { Axios } from '../../../config/Axios';
 import { LanguageContext } from '../../../context/Lang';
 
