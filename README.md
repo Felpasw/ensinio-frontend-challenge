@@ -16,6 +16,8 @@ Por estar em deploy, a fake-api também foi posta em deploy para melhor visualiz
 - <a href="https://vitest.dev">Vitest</a>
 - <a href="https://testing-library.com">Testing Library</a>
 - <a href="https://vitejs.dev">Vite</a>
+- <a href="https://www.framer.com/motion/">Frammer Motion</a>
+- 
 
 ## Componentes ✍️ 
 Para a construção desse site, a página toda foi dividida em 6 componentes sendo eles:
