@@ -1,9 +1,16 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { it, expect } from 'vitest';
 import Navbar from '.';
+import LangContext from '../../../context/Lang';
 
-it('Should be able to render the component "MobileMenu"', () => {
-  const { debug } = render(<Navbar />);
-  debug();
-});
+await waitFor(() =>
+  it('Should be able to render the component "Navbar"', async () => {
+    const { findByTestId } = render(
+      <LangContext>
+        <Navbar />
+      </LangContext>
+    );
+    expect(findByTestId('Navbar')).toBeTruthy();
+  })
+);

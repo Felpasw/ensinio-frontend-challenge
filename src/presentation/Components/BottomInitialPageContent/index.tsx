@@ -25,7 +25,7 @@ export default function BottomInitialPageContent() {
   });
 
   return (
-    <S.BottomContent>
+    <S.BottomContent data-testid="BottomInitialPageContent">
       <S.BottomTopTitles>
         <S.BottomTopTitle>
           {textContent.BottomSubtitleText2[lang.state]}

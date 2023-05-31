@@ -1,6 +1,7 @@
-export default function IconChecked() {
+export default function IconChecked(props: { testid: string }) {
   return (
     <svg
+      data-testid={props.testid}
       width="2.13vh"
       height="2.13vh"
       viewBox="0 0 16 16"

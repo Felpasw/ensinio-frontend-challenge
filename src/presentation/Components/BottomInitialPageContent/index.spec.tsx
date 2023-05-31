@@ -1,9 +1,27 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
-import { it } from 'vitest';
+import { render, waitFor } from '@testing-library/react';
+import { it, expect } from 'vitest';
 import BottomInitialPageContent from '.';
+import LangContext from '../../../context/Lang';
 
-it('Should be able to render the component "BottomInitialPageContent"', () => {
-  const { debug } = render(<BottomInitialPageContent />);
-  debug();
-});
+await waitFor(() =>
+  it('Should be able to render the component "BottomInitialPageContent"', () => {
+    const { findByTestId } = render(
+      <LangContext>
+        <BottomInitialPageContent />
+      </LangContext>
+    );
+    expect(findByTestId('BottomInitialPageContent')).toBeTruthy();
+  })
+);
+
+await waitFor(() =>
+  it('Should be able to render the component "Footer"', () => {
+    const { findByTestId } = render(
+      <LangContext>
+        <BottomInitialPageContent />
+      </LangContext>
+    );
+    expect(findByTestId('BottomInitialPageContent')).toBeTruthy();
+  })
+);

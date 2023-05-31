@@ -27,12 +27,24 @@ export default function MobileMenu() {
 
   return (
     <AnimatePresence>
-      <S.Content>
+      <S.Content
+        data-testid="MobileMenu"
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.75,
+        }}
+      >
         <S.Logo>
           <EnsionioLogo />
         </S.Logo>
 
         <S.MenuIcon
+          data-testid="MenuButton"
           whileTap={{
             scale: 1.5,
           }}
@@ -45,7 +57,7 @@ export default function MobileMenu() {
       </S.Content>
 
       {isVisible && (
-        <S.Nav>
+        <S.Nav data-testid="menuHidden">
           <S.TopContent>
             <S.RightTopContent>
               <S.CurrentLanguage
@@ -107,6 +119,7 @@ export default function MobileMenu() {
 
           <S.MenuContent>
             <S.SolutionsDropdown
+              data-testid="solutionsDropdown"
               onClick={() => setSolutionIsVisible(!solutionIsVisible)}
               initial={{
                 opacity: 0,
@@ -127,6 +140,7 @@ export default function MobileMenu() {
             {solutionIsVisible &&
               textContent.solutionsList.map((element) => (
                 <motion.div
+                  data-testid="solutionsDiv"
                   initial={{
                     opacity: 0,
                     x: 100,

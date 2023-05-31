@@ -11,6 +11,7 @@ export default function LanguageMenu() {
 
   return (
     <S.LaguagesContainer
+      data-testid="LanguageMenu"
       initial={{
         opacity: 0,
       }}
@@ -22,6 +23,7 @@ export default function LanguageMenu() {
       }}
     >
       <S.LanguagesItem
+        data-testid="LanguagePT"
         onClick={() => lang.setState('pt')}
         initial={{
           opacity: 0,
@@ -36,10 +38,11 @@ export default function LanguageMenu() {
         }}
       >
         <IconBrazil /> <h2 style={{ fontSize: '2vh' }}>PT</h2>
-        {lang.state === 'pt' && <IconChecked />}
+        {lang.state === 'pt' && <IconChecked testid="checked-pt" />}
       </S.LanguagesItem>
 
       <S.LanguagesItem
+        data-testid="LanguageEN"
         onClick={() => lang.setState('en')}
         initial={{
           opacity: 0,
@@ -54,10 +57,11 @@ export default function LanguageMenu() {
         }}
       >
         <IconUSA /> <h2 style={{ fontSize: '2vh' }}>EN</h2>
-        {lang.state === 'en' && <IconChecked />}
+        {lang.state === 'en' && <IconChecked testid="checked-en" />}
       </S.LanguagesItem>
 
       <S.LanguagesItem
+        data-testid="LanguageES"
         onClick={() => lang.setState('es')}
         initial={{
           opacity: 0,
@@ -72,7 +76,7 @@ export default function LanguageMenu() {
         }}
       >
         <IconSpain /> <h2 style={{ fontSize: '2vh' }}>ES</h2>
-        {lang.state === 'es' && <IconChecked />}
+        {lang.state === 'es' && <IconChecked testid="checked-es" />}
       </S.LanguagesItem>
     </S.LaguagesContainer>
   );

@@ -17,11 +17,13 @@ export default function Footer() {
       <S.Footer>
         <S.FooterTitleContent>
           <IconRocket />
-          <S.FooterText>{textContent.FooterText[lang.state]}</S.FooterText>
+          <S.FooterText data-testid="leftfootertext">
+            {textContent.FooterText[lang.state]}
+          </S.FooterText>
         </S.FooterTitleContent>
 
         <S.SeeMoreContent>
-          <S.SeeMoreText>
+          <S.SeeMoreText data-testid="rightfootertext">
             {textContent.FooterRightTextContent[lang.state]}
           </S.SeeMoreText>
           <IconArrow />
