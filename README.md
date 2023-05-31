@@ -41,10 +41,14 @@ Executanto aplicação em modo de desenvolvedor.
 npm run start  
 ```
 Iniciando o json-sever.
+- Crie um arquivo na root do projeto com a extensão `.env` 
+- Neste arquivo, crie uma variável com o nome `VITE_DATA_BASE_URL` e atribua o valor a `http://localhost:3000` ou atribua o valor da API já em deploy disponibilizada 
+- Caso opte por atribuir o valor de servidor local, você pode iniciar ele com o seguinte comando:
 ```bash
 npm start-dev
 ```
-Executando os testes realizados.
+## Testes 
+Esse projeto possui alguns testes simples e essenciais para a lógica da página, você pode executar eles usando:
 ```bash
 npm run test
 ```
