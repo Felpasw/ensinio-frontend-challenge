@@ -70,6 +70,7 @@ export const Subtitle = styled.h2`
   line-height: 150%;
 
   margin-top: 44px;
+  padding-top: 40px;
   max-width: 100%;
 
   color: #ffff;
