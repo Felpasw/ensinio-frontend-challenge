@@ -121,7 +121,6 @@ export default function MobileMenu() {
                 delay: 0.2,
               }}
             >
-              <hr style={{ borderColor: '#41b5d9', width: '100%' }} />
               {textContent.SolutionsText[lang.state]}
               <IconTriangle />
             </S.SolutionsDropdown>
@@ -146,10 +145,12 @@ export default function MobileMenu() {
                   }}
                   style={{ cursor: 'pointer' }}
                 >
-                  <S.SolutionsTitle>
-                    {element.icon} {element.title[lang.state]}
-                  </S.SolutionsTitle>
-                  {element.descripton[lang.state]}
+                  <S.SolutionsWrapper>
+                    <S.SolutionsTitle>
+                      {element.icon} {element.title[lang.state]}
+                    </S.SolutionsTitle>
+                    {element.descripton[lang.state]}
+                  </S.SolutionsWrapper>
                 </motion.div>
               ))}
 
@@ -168,12 +169,11 @@ export default function MobileMenu() {
                   delay: 0.2,
                 }}
               >
-                <hr style={{ borderColor: '#41b5d9', width: '100%' }} />
                 {element.content[lang.state]}
               </S.MenuOption>
             ))}
+            <S.Button> {textContent.BtnText[lang.state]}</S.Button>
           </S.MenuContent>
-          <S.Button> {textContent.BtnText[lang.state]}</S.Button>
         </S.Nav>
       )}
     </AnimatePresence>

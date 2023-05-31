@@ -35,7 +35,7 @@ export const Nav = styled.div`
     background: linear-gradient(259.95deg, #5f41d9 2.25%, #41b5d9 100.27%);
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
   }
 `;
 
@@ -113,8 +113,19 @@ export const MenuContent = styled.div`
   margin: 5%;
   padding: 3%;
   color: #ffff;
-  height: 400px;
+  height: 100%;
   flex-direction: column;
+  overflow-y: scroll;
+
+  /* hide scrollbar but allow scrolling */
+
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 `;
 
 export const MenuOption = styled(motion.div)`
@@ -122,6 +133,10 @@ export const MenuOption = styled(motion.div)`
   width: 100%;
   cursor: pointer;
   height: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+  padding: 16px 0;
 `;
 
 export const SolutionsDropdown = styled(motion.div)`
@@ -129,12 +144,27 @@ export const SolutionsDropdown = styled(motion.div)`
   width: 100%;
   cursor: pointer;
   height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
+export const SolutionsWrapper = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin: 16px 0;
 `;
 
 export const SolutionsTitle = styled.div`
   display: flex;
+  gap: 8px;
+
   font-size: 3vh;
-  flex-direction: row;
 `;
 
 export const Button = styled.button`
