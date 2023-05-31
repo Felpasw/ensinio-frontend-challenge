@@ -110,11 +110,12 @@ export const Button = styled.button`
 export const Buttons = styled.div`
   display: flex;
   flex-direction: row;
+  align-self: center;
   gap: 8px;
 
   margin-top: 48px;
 
-  max-width: fit-content;
+  max-width: 100%;
   justify-content: center;
 
   @media (max-width: 1100px) {
@@ -143,9 +144,12 @@ export const SeeVideoContent = styled.div`
 
 export const SeeVideoContentText = styled.h2`
   align-self: center;
+
   font-size: 2.13vh;
   line-height: 125%;
+
   width: 100%;
+
   color: #ffff;
 `;
 
