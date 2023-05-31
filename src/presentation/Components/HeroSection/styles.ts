@@ -36,6 +36,8 @@ export const TopTitleContent = styled.div`
   font-size: 2vh;
   text-transform: uppercase;
 
+  padding-bottom: 20px;
+
   display: flex;
   flex-direction: row;
   align-items: center;
