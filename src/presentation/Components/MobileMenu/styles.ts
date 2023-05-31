@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   display: none;
   @media (max-width: 1100px) {
     display: flex;

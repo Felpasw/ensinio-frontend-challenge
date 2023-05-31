@@ -68,6 +68,14 @@ export const Buttton = styled.button`
   }
 `;
 
+export const SolutionsTitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+
+  width: 100%;
+`;
+
 export const EnterContent = styled.div`
   display: flex;
   flex-direction: row;
@@ -150,6 +158,7 @@ export const SolutionsItem = styled(motion.div)`
 
   width: 100%;
   padding: 4%;
+  margin: 3%;
 `;
 
 export const SolutionsTitle = styled.h2`
@@ -166,6 +175,8 @@ export const SolutionsTitle = styled.h2`
 `;
 
 export const Title = styled.h1`
+  align-self: center;
+
   color: #5f41d9;
 
   font-weight: 600;
