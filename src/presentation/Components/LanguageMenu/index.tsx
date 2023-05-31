@@ -9,7 +9,7 @@ import * as S from './styles';
 export default function LanguageMenu() {
   const lang = useContext(LanguageContext);
 
-  return lang.state === 'pt' ? (
+  return (
     <S.LaguagesContainer
       initial={{
         opacity: 0,
@@ -36,7 +36,7 @@ export default function LanguageMenu() {
         }}
       >
         <IconBrazil /> <h2 style={{ fontSize: '2vh' }}>PT</h2>
-        <IconChecked />
+        {lang.state === 'pt' && <IconChecked />}
       </S.LanguagesItem>
 
       <S.LanguagesItem
@@ -54,9 +54,7 @@ export default function LanguageMenu() {
         }}
       >
         <IconUSA /> <h2 style={{ fontSize: '2vh' }}>EN</h2>
-        <S.NotVIsible>
-          <IconChecked />
-        </S.NotVIsible>
+        {lang.state === 'en' && <IconChecked />}
       </S.LanguagesItem>
 
       <S.LanguagesItem
@@ -74,150 +72,7 @@ export default function LanguageMenu() {
         }}
       >
         <IconSpain /> <h2 style={{ fontSize: '2vh' }}>ES</h2>
-        <S.NotVIsible>
-          <IconChecked />
-        </S.NotVIsible>
-      </S.LanguagesItem>
-    </S.LaguagesContainer>
-  ) : lang.state === 'en' ? (
-    <S.LaguagesContainer
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.5,
-      }}
-    >
-      <S.LanguagesItem
-        onClick={() => lang.setState('pt')}
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-      >
-        <IconBrazil /> <h2 style={{ fontSize: '2vh' }}>PT</h2>
-        <S.NotVIsible>
-          <IconChecked />
-        </S.NotVIsible>
-      </S.LanguagesItem>
-
-      <S.LanguagesItem
-        onClick={() => lang.setState('en')}
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-      >
-        <IconUSA /> <h2 style={{ fontSize: '2vh' }}>EN</h2>
-        <IconChecked />
-      </S.LanguagesItem>
-
-      <S.LanguagesItem
-        onClick={() => lang.setState('es')}
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-      >
-        <IconSpain />
-        <h2 style={{ fontSize: '2vh' }}>ES</h2>
-        <S.NotVIsible>
-          <IconChecked />
-        </S.NotVIsible>
-      </S.LanguagesItem>
-    </S.LaguagesContainer>
-  ) : (
-    <S.LaguagesContainer
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.5,
-      }}
-    >
-      <S.LanguagesItem
-        onClick={() => lang.setState('pt')}
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-      >
-        <IconBrazil /> <h2 style={{ fontSize: '2vh' }}>PT</h2>
-        <S.NotVIsible>
-          <IconChecked />
-        </S.NotVIsible>
-      </S.LanguagesItem>
-
-      <S.LanguagesItem
-        onClick={() => lang.setState('en')}
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-      >
-        <IconUSA /> <h2 style={{ fontSize: '2vh' }}>EN</h2>
-        <S.NotVIsible>
-          <IconChecked />
-        </S.NotVIsible>
-      </S.LanguagesItem>
-
-      <S.LanguagesItem
-        onClick={() => lang.setState('es')}
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-      >
-        <IconSpain /> <h2 style={{ fontSize: '2vh' }}>ES</h2>
-        <IconChecked />
+        {lang.state === 'es' && <IconChecked />}
       </S.LanguagesItem>
     </S.LaguagesContainer>
   );

@@ -48,10 +48,15 @@ export const LaguagesContainer = styled(motion.div)`
 
 export const LanguagesItem = styled(motion.div)`
   font-size: 2vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
   color: #000;
   width: 100%;
-  padding: 6px;
+
+  padding: 8px;
+  gap: 8px;
 `;
