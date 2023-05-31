@@ -12,7 +12,7 @@ export default function Footer() {
   const lang: LangContextType = useContext(LanguageContext);
 
   return (
-    <>
+    <div data-testid="Footer">
       <hr style={{ maxWidth: '100%', margin: '3%', marginRight: 0 }} />
       <S.Footer>
         <S.FooterTitleContent>
@@ -27,6 +27,6 @@ export default function Footer() {
           <IconArrow />
         </S.SeeMoreContent>
       </S.Footer>
-    </>
+    </div>
   );
 }

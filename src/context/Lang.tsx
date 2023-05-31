@@ -10,7 +10,7 @@ export const LanguageContext = createContext<LangContextType>(
 
 export default function LangContext(Props: { children: JSX.Element }) {
   const [currentLanguage, setCurrentLanguage] = useState<Lang>(StartLang);
-  console.log(currentLanguage);
+
   const contextValue: LangContextType = {
     state: currentLanguage,
     setState: setCurrentLanguage,

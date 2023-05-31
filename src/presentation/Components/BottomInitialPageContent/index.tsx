@@ -1,6 +1,6 @@
 import * as textContent from '../../../textContent';
 import IconTrilhas from '../../../assets/IconTrilhas';
-import IconPlaylists from '../../../assets/IconPlaylists';
+import IconPlaylists from '../../../assets/IconFolder';
 import IconFolder from '../../../assets/IconFolder';
 import * as S from './styles';
 import { useEffect, useState, useContext } from 'react';
@@ -30,6 +30,7 @@ export default function BottomInitialPageContent() {
         <S.BottomTopTitle>
           {textContent.BottomSubtitleText2[lang.state]}
         </S.BottomTopTitle>
+
         <S.BottomTopTitle2>
           {textContent.BottomSubtitleText[lang.state]}
         </S.BottomTopTitle2>
