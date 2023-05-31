@@ -19,7 +19,7 @@ export default function Navbar() {
   const lang: LangContextType = useContext(LanguageContext);
 
   return (
-    <AnimatePresence>
+    <>
       <S.Nav>
         <a href="/">
           <EnsionioLogo />
@@ -127,6 +127,6 @@ export default function Navbar() {
           </S.LanguageSelector>
         </S.Navlist>
       </S.Nav>
-    </AnimatePresence>
+    </>
   );
 }

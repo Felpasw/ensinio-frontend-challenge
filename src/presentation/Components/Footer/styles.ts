@@ -6,6 +6,7 @@ export const SeeMoreText = styled.h2`
   margin-right: 5px;
   line-height: 125%;
   padding: 2%;
+  width: 100%;
   cursor: pointer;
 `;
 

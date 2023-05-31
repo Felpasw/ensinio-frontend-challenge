@@ -12,6 +12,7 @@ export const Content = styled.div`
     height: 15vh;
     backdrop-filter: blur(15px);
     z-index: 1;
+    background: rgba(90, 74, 217, 0.35);
   }
 `;
 
@@ -71,7 +72,7 @@ export const TopContent = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  height: 8vh;
+  height: 10vh;
   width: 100%;
 `;
 
@@ -97,10 +98,17 @@ export const CurrentLanguage = styled.div`
 export const LeftTopContent = styled.div`
   display: flex;
   cursor: pointer;
+
   flex-direction: row;
+
+  gap: 8px;
+
   color: #fff;
+
   margin-left: 7%;
+
   align-self: center;
+
   font-size: 3vh;
 `;
 
@@ -117,14 +125,12 @@ export const MenuContent = styled.div`
   flex-direction: column;
   overflow-y: scroll;
 
-  /* hide scrollbar but allow scrolling */
-
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+    display: none;
   }
 `;
 
@@ -140,13 +146,16 @@ export const MenuOption = styled(motion.div)`
 `;
 
 export const SolutionsDropdown = styled(motion.div)`
+  display: flex;
+  align-items: center;
+
+  padding: 16px 0;
+
   font-size: 4.19vh;
   width: 100%;
   cursor: pointer;
   height: 100%;
 
-  display: flex;
-  align-items: center;
   gap: 16px;
 `;
 
@@ -201,6 +210,8 @@ export const LanguageSelector = styled.button`
   position: relative;
 
   cursor: pointer;
+
+  font-size: 16px;
 
   display: flex;
   justify-content: center;

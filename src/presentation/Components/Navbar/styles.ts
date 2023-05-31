@@ -118,7 +118,6 @@ export const SolutionsItem = styled(motion.div)`
   width: 100%;
   justify-content: center;
   padding: 4%;
-  width: 100%;
 `;
 
 export const SolutionsTitle = styled.h2`
@@ -144,6 +143,7 @@ export const SolutionsContainer = styled.div`
   background-color: #ffff;
   border-radius: 10px;
   padding: 2vh;
+  gap: 16px;
   margin-top: 2vh;
 `;
 
@@ -194,5 +194,5 @@ export const LanguagesItem = styled.div`
 `;
 export const SolutionsDescription = styled.h2`
   font-size: 1.5vh;
-  margin-left: 2%;
+  margin-left: 18%;
 `;

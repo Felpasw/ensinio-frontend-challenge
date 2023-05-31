@@ -7,24 +7,10 @@ export const MainContent = styled.div`
   z-index: -1;
 `;
 
-export const Img = styled.img`
-  position: absolute;
-  bottom: 0;
-  left: 100px;
-  width: 60.43vh;
-  height: 60.97vh;
-  max-width: 100%;
-`;
-
 export const CircleSVG = styled.div`
   position: absolute;
-  right: 500px;
   bottom: 0;
-  right: 0;
   max-width: 100%;
-  overflow: hidden;
-  @media (max-width: 1100px) {
-  }
 `;
 
 export const Logos = styled.div`
@@ -37,10 +23,8 @@ export const Logos = styled.div`
 export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5%;
   max-width: 100%;
   @media (max-width: 999px) {
-    margin-left: 10%;
     align-items: center;
   }
 `;
@@ -49,12 +33,16 @@ export const TopTitleContent = styled.div`
   letter-spacing: 0.15em;
   font-style: normal;
   font-weight: 600;
+  align-items: center;
   line-height: 105%;
   width: 35vh;
   height: 2.26vh;
   font-size: 2vh;
   color: #ffff;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 `;
 
 export const Title = styled.h1`
@@ -79,6 +67,9 @@ export const Subtitle = styled.h2`
   line-height: 150%;
   width: 55.39vh;
   height: 9.58vh;
+  @media (max-width: 1100px) {
+    margin-top: 10px;
+  }
 `;
 
 export const Button = styled.button`
@@ -86,7 +77,7 @@ export const Button = styled.button`
   font-size: 2vh;
   height: 7.45vh;
   margin-right: 44px;
-  width: 24.5vh;
+  width: 30vh;
   cursor: pointer;
   max-width: 100%;
   background: #00e1e7;
@@ -103,61 +94,86 @@ export const Button = styled.button`
 export const Buttons = styled.div`
   margin-top: 48px;
   display: flex;
+  max-width: fit-content;
+  gap: 8px;
+  justify-content: center;
   flex-direction: row;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 `;
 
 export const SeeVideoContent = styled.div`
   display: flex;
   flex-direction: row;
+  width: 20vh;
   cursor: pointer;
   transition: 0.15s ease-in-out;
   &:hover {
     opacity: 0.7;
+  }
+  @media (max-width: 1100px) {
+    margin-left: 13%;
   }
 `;
 
 export const SeeVideoContentText = styled.h2`
   font-size: 2.13vh;
   line-height: 125%;
+  width: 100%;
   color: #ffff;
-  margin-left: 8px;
   align-self: center;
-`;
-
-export const UnionSVGTop = styled.div`
-  position: absolute;
-  left: 300px;
-  top: 60px;
-  right: 0;
-`;
-
-export const UnionSVGBottom = styled.div`
-  position: relative;
-  left: 60px;
-  right: 0;
-  top: 200px;
 `;
 
 export const MainContentElements = styled.div`
   display: flex;
   flex-direction: row;
-  position: relative;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 3%;
+  margin-right: 3%;
+
   @media (max-width: 1100px) {
     flex-direction: column;
   }
 `;
 
+export const HeroWrapper = styled.div`
+  position: relative;
+  bottom: 0;
+  right: 80px;
+`;
+
 export const HeroContent = styled.div`
   position: absolute;
-  bottom: 0;
-  right: 190px;
-  width: 60.43vh;
-  height: 60.97vh;
+`;
 
+export const UnionSVGBottom = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+`;
+
+export const UnionSVGTop = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 24px;
+`;
+
+export const Img = styled.img`
+  aspect-ratio: 685 / 554;
+  bottom: 0;
+  max-width: 100%;
+  height: 100%;
+  margin-top: 5%;
+`;
+
+export const MobileContent = styled.div`
+  display: none;
   @media (max-width: 1100px) {
-    position: relative;
-    left: -90px;
+    display: relative;
+    height: 100%;
+    margin-top: 500px;
   }
 `;
