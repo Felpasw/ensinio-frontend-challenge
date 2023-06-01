@@ -89,10 +89,10 @@ export const CurrentLanguage = styled.div`
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  padding: 4%;
   width: 100%;
   color: #ffff;
   align-items: center;
+  margin-left: 30px;
 `;
 
 export const LeftTopContent = styled.div`

@@ -7,7 +7,11 @@ import LangContext from '../../../context/Lang';
 
 await waitFor(() =>
   it('Should be able to render the component "LanguageMenu"', async () => {
-    const { findByTestId } = render(<LanguageMenu />);
+    const { findByTestId } = render(
+      <LangContext>
+        <LanguageMenu />
+      </LangContext>
+    );
     expect(findByTestId('LanguageMenu')).toBeTruthy();
   })
 );

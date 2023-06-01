@@ -36,17 +36,21 @@ export const TopTitleContent = styled.div`
   font-size: 2vh;
   text-transform: uppercase;
 
-  padding-bottom: 20px;
-
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-self: center;
+
   gap: 8px;
 
-  width: 35vh;
+  width: 100%;
   height: 2.26vh;
 
   color: #ffff;
+  @media (max-width: 1100px) {
+    padding-top: 15%;
+    padding-bottom: 0px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -70,7 +74,7 @@ export const Subtitle = styled.h2`
   line-height: 150%;
 
   margin-top: 44px;
-  padding-top: 40px;
+  padding-top: 4px;
   max-width: 100%;
 
   color: #ffff;
@@ -78,7 +82,9 @@ export const Subtitle = styled.h2`
   width: 55.39vh;
   height: 9.58vh;
   @media (max-width: 1100px) {
-    margin-top: 10px;
+    margin-top: 60px;
+    padding-top: 20px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -141,7 +147,7 @@ export const SeeVideoContent = styled.div`
   }
 
   @media (max-width: 1100px) {
-    margin-left: 13%;
+    margin-left: 20%;
   }
 `;
 
@@ -172,18 +178,7 @@ export const MainContentElements = styled.div`
 
 export const Img = styled.img`
   aspect-ratio: 685 / 554;
-
   max-width: 100%;
   height: 100%;
-
   margin-top: 5%;
-`;
-
-export const MobileContent = styled.div`
-  display: none;
-  @media (max-width: 1100px) {
-    display: relative;
-    height: 100%;
-    margin-top: 500px;
-  }
 `;

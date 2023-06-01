@@ -16,12 +16,13 @@ await waitFor(() =>
 );
 
 await waitFor(() =>
-  it('Should be able to render the component "Footer"', () => {
-    const { findByTestId } = render(
+  it('Should be able to get an item on API request', async () => {
+    const { findByText } = render(
       <LangContext>
         <BottomInitialPageContent />
       </LangContext>
     );
-    expect(findByTestId('BottomInitialPageContent')).toBeTruthy();
+    const ApiContent = await findByText('Trilhas');
+    expect(ApiContent).toBeInTheDocument();
   })
 );

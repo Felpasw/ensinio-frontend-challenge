@@ -17,7 +17,7 @@ await waitFor(() =>
 );
 
 await waitFor(() =>
-  it('Should ba able to render the component "Nav" when click the menu button', async () => {
+  it('Should ba able to render the component "Nav" when clicking the menu button', async () => {
     const { findByTestId } = render(
       <LangContext>
         <MobileMenu />
@@ -31,7 +31,7 @@ await waitFor(() =>
 );
 
 await waitFor(() =>
-  it('Should ba able see the dropdown menu in the mobile menu when click the button', async () => {
+  it('Should ba able see the dropdown menu in the mobile menu when clicking the button', async () => {
     const { findByTestId, findAllByTestId } = render(
       <LangContext>
         <MobileMenu />
