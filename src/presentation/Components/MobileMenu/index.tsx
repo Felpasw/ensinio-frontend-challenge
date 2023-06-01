@@ -6,7 +6,7 @@ import * as textContent from '../../../textContent';
 
 import { NavItemsList } from '../../../textContent';
 
-import UserProfileLogo from '../../../assets/UserProfileLogo';
+import UserProfileLogo from '../../../assets/IconUserProfileLogo';
 import IconBrazil from '../../../assets/IconBrazil';
 import IconTriangle from '../../../assets/IconTriagle';
 import EnsionioLogo from '../../../assets/EnsinioLogo';

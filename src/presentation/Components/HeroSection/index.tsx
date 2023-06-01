@@ -1,5 +1,5 @@
 import AudioPlayIcon from '../../../assets/AudioPlayIcon';
-import IconCertified from '../../../assets/IconCertified';
+import IconCertified from '../../../assets/IconBrazil';
 import IconPlaylist from '../../../assets/IconPlaylist';
 import MediaLogo from '../../../assets/IconMediaLogo';
 

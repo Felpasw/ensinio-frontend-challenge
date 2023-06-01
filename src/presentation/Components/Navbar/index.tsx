@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 
 import EnsionioLogo from '../../../assets/EnsinioLogo';
-import UserProfileLogo from '../../../assets/UserProfileLogo';
+import UserProfileLogo from '../../../assets/IconUserProfileLogo';
 import IconTriangle from '../../../assets/IconTriagle';
 
 import * as textContent from '../../../textContent';
