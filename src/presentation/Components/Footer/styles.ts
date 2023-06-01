@@ -21,6 +21,9 @@ export const SeeMoreContent = styled.div`
 
   margin-right: 10%;
   margin-top: 3%;
+  @media (max-width: 1100px) {
+    margin-top: 13%;
+  }
 `;
 
 export const Footer = styled.div`
