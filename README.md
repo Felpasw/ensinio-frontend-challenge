@@ -45,7 +45,7 @@ Iniciando o json-sever.
 - Neste arquivo, crie uma variável com o nome `VITE_DATA_BASE_URL` e atribua o valor a `http://localhost:3000` ou atribua o valor da API já em deploy disponibilizada 
 - Caso opte por atribuir o valor de servidor local, você pode iniciar ele com o seguinte comando:
 ```bash
-npm start-dev
+npm run start-dev
 ```
 ## Testes 
 Esse projeto possui alguns testes simples e essenciais para a lógica da página, você pode executar eles usando:
